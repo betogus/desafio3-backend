@@ -5,7 +5,7 @@ const pathToFile = './productos.txt'
 
 class Contenedor {
 
-    getProducts = async () => {
+    async getProducts() {
         if (fs.existsSync(pathToFile)) { 
             let data = await fs.promises.readFile(pathToFile, 'utf-8')
             let products = JSON.parse(data)
